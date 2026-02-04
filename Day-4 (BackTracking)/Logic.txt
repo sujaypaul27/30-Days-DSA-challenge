@@ -1,0 +1,10 @@
+backtrack(current_state):
+
+    if base_condition:
+        save_answer
+        return
+
+    for each choice in possible_choices:
+        make_choice
+        backtrack(updated_state)
+        undo_choice
