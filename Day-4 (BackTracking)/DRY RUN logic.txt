@@ -1,0 +1,12 @@
+start: path = []
+
+index=0
+├── TAKE 1 → [1]
+│   index=1
+│   ├── TAKE 2 → [1,2] → add to result
+│   └── NOT TAKE → [1] → add to result
+│
+└── NOT TAKE → []
+    index=1
+    ├── TAKE 2 → [2] → add to result
+    └── NOT TAKE → [] → add to result
