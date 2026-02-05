@@ -35,3 +35,64 @@ O(1) | Constant space | Few variables only
 O(n) | Linear space | Extra array
 O(log n) | Logarithmic space | Binary Search recursion
 O(n²) | Quadratic space | Matrix / 2D array problems
+
+
+Example 1: Linear Search
+
+def find(arr, x):
+    for i in arr:
+        if i == x:
+            return True
+    return False
+
+
+Time Complexity:
+O(n) — One loop through array
+
+Space Complexity:
+O(1) — Only few variables used
+
+Example 2: Recursive Fibonacci
+
+def fib(n):
+    if n <= 1:
+        return n
+    return fib(n-1) + fib(n-2)
+
+
+Time Complexity:
+O(2ⁿ) — Many repeated recursive calls
+
+Space Complexity:
+O(n) — Recursion call stack depth
+
+How to Calculate Time Complexity?
+
+Count loops and recursive calls
+
+Focus on the dominant term
+
+Ignore constants
+
+Example:
+O(2n) → O(n)
+
+How to Calculate Space Complexity?
+
+Count extra memory used
+
+Include arrays, recursion stack, hash maps, etc.
+
+Ignore input storage
+
+Beginner Tips:
+
+Single loop → O(n)
+
+Nested loops → O(n²)
+
+Recursion → consider call stack size
+
+Efficient sorting → O(n log n)
+
+Hashing access → usually O(1)
