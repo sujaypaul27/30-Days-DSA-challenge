@@ -1,0 +1,37 @@
+What is Time Complexity?
+
+Time Complexity measures how the running time of an algorithm grows as the input size n increases.
+It helps estimate algorithm performance, especially for large inputs.
+
+Common Time Complexities:
+
+Time Complexity | Description | Example
+O(1) | Constant time | Accessing an array element
+O(log n) | Logarithmic time | Binary Search
+O(n) | Linear time | Loop through an array
+O(n log n) | Log-linear time | Merge Sort, Quick Sort (average)
+O(n²) | Quadratic time | Nested loops
+O(2ⁿ) | Exponential time | Recursive Fibonacci
+O(n!) | Factorial time | N-Queens (brute force)
+
+What is Space Complexity?
+
+Space Complexity measures how much extra memory an algorithm uses relative to input size n.
+
+It includes:
+
+Function call stack
+
+Auxiliary arrays or data structures
+
+Variables used in computation
+
+(Note: Input storage is usually not counted.)
+
+Common Space Complexities:
+
+Space Complexity | Description | Example
+O(1) | Constant space | Few variables only
+O(n) | Linear space | Extra array
+O(log n) | Logarithmic space | Binary Search recursion
+O(n²) | Quadratic space | Matrix / 2D array problems
