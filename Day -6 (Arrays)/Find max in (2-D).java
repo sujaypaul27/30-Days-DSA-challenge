@@ -8,7 +8,7 @@ class Main {
         int max=Integer.MIN_VALUE;
         for(int i=0;i<arr.length;i++)
         {
-            for(int j=0;j<arr.length;j++)
+            for(int j=0;j<arr[i].length;j++)//for accesessing the row legth we use[i]
             {
             if(arr[i][j]>max)
             {
