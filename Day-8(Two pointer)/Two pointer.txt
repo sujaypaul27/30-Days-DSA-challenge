@@ -6,45 +6,41 @@ Two Pointer is a technique where we use
 two indexes (pointers) to traverse a data structure
 instead of using nested loops.
 
-Usually used to reduce Time Complexity from O(n²) → O(n).
+Main goal:
+Reduce Time Complexity from O(n^2) to O(n)
 
-SPECIAL KEYWORDS (REMEMBER THESE)
+SPECIAL KEYWORDS (VERY IMPORTANT)
 
 left pointer
-
 right pointer
-
 start and end
-
-slow and fast
-
-move pointers based on condition
-
+slow pointer
+fast pointer
 sorted array
-
+pair / triplet
+target condition
 optimize brute force
-
 avoid nested loops
 
 WHEN TO USE TWO POINTER?
 
 Use Two Pointer when you see:
 
-✅ Sorted Array / Sorted String
+Sorted array or sorted string
 
-✅ Pairs / Triplets / Subarray problems
+Finding pair / triplet
 
-✅ Compare elements from both ends
+Comparing elements
 
-✅ Need O(n) or O(n log n) solution
+Brute force solution uses nested loops
 
-✅ Brute force uses nested loops
+Need optimized O(n) solution
 
-✅ Questions with conditions like sum, difference, target
+Questions with sum, difference, target
 
 WHERE TO USE TWO POINTER?
 
-Most commonly used in:
+Mostly used in:
 
 Arrays
 
@@ -54,19 +50,20 @@ Linked Lists
 
 TYPES OF TWO POINTER
 
-OPPOSITE DIRECTION POINTERS
+TYPE 1: OPPOSITE DIRECTION POINTERS
 
 One pointer starts from beginning
-
 One pointer starts from end
 
-left → ← right
+left -> <- right
 
 USED WHEN:
 
-Array/String is sorted
+Data is sorted
 
-Need pair sum, reverse, palindrome check
+Comparing two ends
+
+Pair sum or reverse type problems
 
 EXAMPLES:
 
@@ -74,29 +71,25 @@ Two Sum (sorted array)
 
 Reverse array
 
-Check palindrome
+Palindrome check
 
 Container with most water
 
-SAME DIRECTION POINTERS
+TYPE 2: SAME DIRECTION POINTERS
 
 Both pointers move from left to right
 
-One pointer is usually slow
-
-Other pointer is fast
-
-slow → fast →
+slow -> fast ->
 
 USED WHEN:
 
 Remove duplicates
 
-Sliding window
+Sliding window problems
 
-Detect cycles
+Partitioning
 
-Partition problems
+Cycle detection
 
 EXAMPLES:
 
@@ -108,44 +101,37 @@ Longest substring
 
 Linked List cycle detection
 
-HOW POINTERS MOVE (IMPORTANT)
+HOW POINTERS MOVE
 
-If condition satisfied → move one pointer
+Move pointer based on condition
 
-If condition not satisfied → move the other pointer
+Do NOT move both blindly
 
-Never move both blindly
-
-Pointer movement depends on problem condition
+Each move depends on problem logic
 
 WHY TWO POINTER IS IMPORTANT?
 
-Reduces Time Complexity
+Improves performance
 
-Cleaner logic
+Cleaner and simpler code
 
-Highly preferred in interviews
+Frequently asked in interviews
 
-Foundation for:
+Base for sliding window and fast-slow patterns
 
-Sliding Window
+INTERVIEW HINT WORDS
 
-Fast & Slow pointer
+If you hear:
 
-Binary Search variations
+Optimize
+Sorted array
+Avoid nested loop
+Find pair
+Compare elements
 
-INTERVIEW SIGNAL WORDS (BIG HINT 🚨)
+Think immediately: TWO POINTER
 
-If interviewer says:
+ONE LINE SUMMARY
 
-“Optimize this”
-
-“Avoid nested loop”
-
-“Sorted array”
-
-“Find pair”
-
-“Check condition between two elements”
-
-👉 THINK TWO POINTER
+Two Pointer is a technique that uses two indexes
+to solve problems efficiently in linear time.
