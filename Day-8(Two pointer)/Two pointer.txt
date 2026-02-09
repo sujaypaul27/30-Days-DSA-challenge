@@ -1,0 +1,151 @@
+TWO POINTER TECHNIQUE (DSA)
+
+WHAT IS TWO POINTER?
+
+Two Pointer is a technique where we use
+two indexes (pointers) to traverse a data structure
+instead of using nested loops.
+
+Usually used to reduce Time Complexity from O(n²) → O(n).
+
+SPECIAL KEYWORDS (REMEMBER THESE)
+
+left pointer
+
+right pointer
+
+start and end
+
+slow and fast
+
+move pointers based on condition
+
+sorted array
+
+optimize brute force
+
+avoid nested loops
+
+WHEN TO USE TWO POINTER?
+
+Use Two Pointer when you see:
+
+✅ Sorted Array / Sorted String
+
+✅ Pairs / Triplets / Subarray problems
+
+✅ Compare elements from both ends
+
+✅ Need O(n) or O(n log n) solution
+
+✅ Brute force uses nested loops
+
+✅ Questions with conditions like sum, difference, target
+
+WHERE TO USE TWO POINTER?
+
+Most commonly used in:
+
+Arrays
+
+Strings
+
+Linked Lists
+
+TYPES OF TWO POINTER
+
+OPPOSITE DIRECTION POINTERS
+
+One pointer starts from beginning
+
+One pointer starts from end
+
+left → ← right
+
+USED WHEN:
+
+Array/String is sorted
+
+Need pair sum, reverse, palindrome check
+
+EXAMPLES:
+
+Two Sum (sorted array)
+
+Reverse array
+
+Check palindrome
+
+Container with most water
+
+SAME DIRECTION POINTERS
+
+Both pointers move from left to right
+
+One pointer is usually slow
+
+Other pointer is fast
+
+slow → fast →
+
+USED WHEN:
+
+Remove duplicates
+
+Sliding window
+
+Detect cycles
+
+Partition problems
+
+EXAMPLES:
+
+Remove duplicates from sorted array
+
+Move zeros
+
+Longest substring
+
+Linked List cycle detection
+
+HOW POINTERS MOVE (IMPORTANT)
+
+If condition satisfied → move one pointer
+
+If condition not satisfied → move the other pointer
+
+Never move both blindly
+
+Pointer movement depends on problem condition
+
+WHY TWO POINTER IS IMPORTANT?
+
+Reduces Time Complexity
+
+Cleaner logic
+
+Highly preferred in interviews
+
+Foundation for:
+
+Sliding Window
+
+Fast & Slow pointer
+
+Binary Search variations
+
+INTERVIEW SIGNAL WORDS (BIG HINT 🚨)
+
+If interviewer says:
+
+“Optimize this”
+
+“Avoid nested loop”
+
+“Sorted array”
+
+“Find pair”
+
+“Check condition between two elements”
+
+👉 THINK TWO POINTER
