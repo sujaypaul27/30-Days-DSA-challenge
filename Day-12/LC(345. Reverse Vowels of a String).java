@@ -32,3 +32,35 @@ Constraints:
 
 1 <= s.length <= 3 * 105
 s consist of printable ASCII characters. */
+
+
+
+class Solution {
+    private boolean isvowel(char c)
+    {
+        c=Character.toLowerCase(c);
+        return c=='a'||c=='e'||c=='i'||c=='o'||c=='u';
+    }
+    public String reverseVowels(String s) {
+        char[] arr = s.toCharArray();
+        int left = 0;
+        int right = arr.length - 1;
+        while(left<=right)
+        {
+            while(left<right&&!isvowel(arr[left]))
+            {
+                left++;
+            }
+             while(left<right&&!isvowel(arr[right]))
+            {
+                right--;
+            }
+            char temp=arr[left];
+            arr[left]=arr[right];
+            arr[right]=temp;
+            left++;
+            right--;
+        }
+        return new String (arr);
+    }
+}
