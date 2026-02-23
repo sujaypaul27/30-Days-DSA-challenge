@@ -14,4 +14,4 @@ class Solution {
         }
         return max;
     }
-}
+}// solution using sliding window and frequency array to keep track of characters in the current window. We expand the right pointer and if we encounter a duplicate character, we move the left pointer until there are no duplicates in the current window. We keep track of the maximum length of the substring without repeating characters.
