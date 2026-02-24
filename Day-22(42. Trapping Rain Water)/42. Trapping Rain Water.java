@@ -11,17 +11,17 @@ class Solution {
             {
                 if(height[left]>=leftmax)
                 {
-                    leftmax=height[left];
+                    leftmax=height[left];// update the leftmax if the current height is greater than or equal to the leftmax
                 }else{
-                    water+=leftmax-height[left];
+                    water+=leftmax-height[left];// we can trap water on the left side if the current height is less than the leftmax
                 }
                 left++;
             }else{// we can trap water on the right side
                 if(height[right]>=rightmax)
                 {
-                    rightmax=height[right];
+                    rightmax=height[right];// update the rightmax if the current height is greater than or equal to the rightmax
                 }else{
-                    water+=rightmax-height[right];
+                    water+=rightmax-height[right];// we can trap water on the right side if the current height is less than the rightmax
                 }
                 right--;
             }
