@@ -29,9 +29,9 @@ class Solution {
             }
             // L...R → do nothing
             
-            i = j;
+            i = j;// Move to the next segment
         }
         
-        return s.substring(1, s.length() - 1);
+        return s.substring(1, s.length() - 1);// Remove the added 'L' and 'R'
     }
 }
