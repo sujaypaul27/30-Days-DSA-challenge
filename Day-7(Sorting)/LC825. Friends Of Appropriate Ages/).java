@@ -25,6 +25,6 @@ class Solution {
             count += right - left - 1; // exclude self
         }
 
-        return count;
+        return count;// Each request is counted twice (A->B and B->A), so divide by 2
     }
 }
