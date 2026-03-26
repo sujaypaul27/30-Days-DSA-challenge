@@ -10,32 +10,41 @@ class Solution {
         int wordCount = words.length;
         int totalLen = wordLen * wordCount;
         
-        // Store frequency of words
         Map<String, Integer> wordMap = new HashMap<>();
         for (String word : words) {
             wordMap.put(word, wordMap.getOrDefault(word, 0) + 1);
         }
         
-        // Try every starting point
-        for (int i = 0; i <= s.length() - totalLen; i++) {
-            Map<String, Integer> seen = new HashMap<>();
-            int j = 0;
+        // Try different offsets
+        for (int i = 0; i < wordLen; i++) {
+            int left = i, count = 0;
+            Map<String, Integer> window = new HashMap<>();
             
-            while (j < wordCount) {
-                int start = i + j * wordLen;
-                String sub = s.substring(start, start + wordLen);
+            for (int right = i; right + wordLen <= s.length(); right += wordLen) {
+                String word = s.substring(right, right + wordLen);
                 
-                if (!wordMap.containsKey(sub)) break;
-                
-                seen.put(sub, seen.getOrDefault(sub, 0) + 1);
-                
-                if (seen.get(sub) > wordMap.get(sub)) break;
-                
-                j++;
-            }
-            
-            if (j == wordCount) {
-                result.add(i);
+                if (wordMap.containsKey(word)) {
+                    window.put(word, window.getOrDefault(word, 0) + 1);
+                    count++;
+                    
+                    // Shrink window if extra word
+                    while (window.get(word) > wordMap.get(word)) {
+                        String leftWord = s.substring(left, left + wordLen);
+                        window.put(leftWord, window.get(leftWord) - 1);
+                        left += wordLen;
+                        count--;
+                    }
+                    
+                    // Valid window found
+                    if (count == wordCount) {
+                        result.add(left);
+                    }
+                    
+                } else {
+                    window.clear();
+                    count = 0;
+                    left = right + wordLen;
+                }
             }
         }
         
